@@ -11,7 +11,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, '../'),
     filename: '[name].js',
-    library: 'loggout',
+    library: 'cooksent',
     libraryTarget: 'umd',
   },
   plugins: [

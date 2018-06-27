@@ -99,25 +99,11 @@ export default class Cooksent {
   }
 
   /**
-   * Returns the popin html view
+   * Inject the div in the DOM
    *
    * @readonly
    * @memberof Cooksent
    */
-  get view() {
-    return `
-      <section class="cooksent ${this.selector}" tabindex="-1" aria-hidden="true" style="display: none;">
-        <div class="cooksent__title">${this.title}</div>
-        <div class="cooksent__body">
-          <div class="cooksent__description">${this.description}</div>
-          <div class="cooksent__btn-div">
-            <button type="button" class="cooksent__btn ${this.btnSelector}">${this.btnLabel}</button>
-          </div>
-        </div>
-      </section>
-    `;
-  }
-
   injectView() {
     // Main section
     this.$section = document.createElement('section');

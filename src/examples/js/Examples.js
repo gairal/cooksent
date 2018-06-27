@@ -6,7 +6,7 @@ export default class Examples {
     // Force re-init of cooksent to inject the html
     this.cooksent1 = new Cooksent().init(true);
     this.cooksent2 = new Cooksent({
-      selector: 'js-cooksent2',
+      selector: '.js-cooksent2',
       btnSelector: 'js-cooksent__btn2',
       title: 'Custom title',
       description: 'Custom description',

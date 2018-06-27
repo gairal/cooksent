@@ -31,67 +31,51 @@ const cooksent = Cooksent.factory();
 
 ## Installation
 ```
-npm install loggout
+npm install cooksent
 ```
 ```
-yarn add loggout
+yarn add cooksent
 ```
 
-## Logging Options
+## Consent Options
+Default values:
 ``` js
 {
-    level: Loggout.LEVELS.info,
-    prefix: level => `LOGG(${level}):`,
-}
-```
-### level
-Log levels follows [RFC5424] ordering.
-
-``` js
-static get LEVELS() {
-    return {
-        silly: 10,
-        debug: 20,
-        verbose: 30,
-        info: 40,
-        warn: 50,
-        error: 60,
-    };
+    selector: 'js-cooksent',
+    btnSelector: 'js-cooksent__btn',
+    title: 'Cookie Consent',
+    description: 'By continuing your navigation without changing your cookie settings, you accept the use of cookies to analyse and measure audience, attendance, navigation and redirection from external websites.',
+    btnLabel: 'ok',
+    onConsent: () => {},
+    storageKey: 'COOKSENT',
 }
 ```
 
-Default level: `error`
+### selector
+Main popin section class selector
 
-Levels can be assessed  through `Loggout.LEVELS` constant.
+### btnSelector
+Consent button class selector
 
-### Prefix
-Prefix options expects a function receiving the level as parameter and returning a string.
-``` js
-(level) => {
-    const ts = Date.now();
-    switch (level) {
-        case Loggout.LEVELS.silly:
-            return `SILLY - ${ts}:`;
-        case Loggout.LEVELS.debug:
-            return `DEBUG - ${ts}:`;
-        case Loggout.LEVELS.verbose:
-            return `LOG - ${ts}:`;
-        case Loggout.LEVELS.info:
-            return `INFO - ${ts}:`;
-        case Loggout.LEVELS.warn:
-            return `WARN - ${ts}:`;
-        case Loggout.LEVELS.error:
-            return `ERROR - ${ts}:`;
-        default:
-            return '';
-    }
-}
-```
+### title
+Popin title
+
+### description
+Popin description
+
+### btnLabel
+Popin button label
+
+### storageKey
+Key used in local storage to memorise the user consent
+
+### onConsent
+onConsent expects a function that will be executed when the user clicks on the consent button.
 
 ## Contribute
 ### File structure
 ```
-loggout/
+cooksent/
  ├──src/                             * our source files that will be compiled to javascript
  |   ├──app/                         * Lib sources
  │   │
@@ -119,7 +103,7 @@ You need to install the following on you system
 * Ensure you running Node version >= 8.0.0
 
 #### Installing
-* `fork` the github repo [https://github.com/gairal/loggout](https://github.com/gairal/loggout)
+* `fork` the github repo [https://github.com/gairal/cooksent](https://github.com/gairal/cooksent)
 * `clone` your fork
 * `npm install` to install all dependencies
 * `make start` or `npm start` to start the dev server
@@ -154,4 +138,3 @@ make test
 #### Author: [Frank Gairal]
 
 [Frank Gairal]: http://github.com/gairal
-[RFC5424]: https://tools.ietf.org/html/rfc5424
