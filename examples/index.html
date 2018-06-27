@@ -1,0 +1,79 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>CookSent</title><meta name="description" content=""><meta name="robots" content="index, follow"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"><meta property="og:locale" content="fr_FR"><meta property="og:type" content="website"><meta property="og:title" content="CookSent"><meta property="og:url" content=""><meta property="og:site_name" content=""><link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" rel="stylesheet" type="text/css"><style type="text/css">body {
+  font-family: sans-serif;
+}
+
+.flex {
+  display: flex;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+code {
+  display: flex;
+  border: dotted 1px #aaa;
+  background-color: #ddd;
+  padding: 1rem;
+}
+
+main button {
+  border: 0;
+  background-color: green;
+  padding: 1rem 2rem;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #eee;
+}
+</style><style type="text/css">.cooksent {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: .5rem;
+  background-color: #333;
+  color: #eee;
+}
+
+.cooksent__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.cooksent__body {
+  display: flex;
+  justify-content: space-between;
+  padding: .5rem;
+}
+
+.cooksent__btn {
+  width: 100%;
+  background-color: #eee;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+}</style></head><body><header><nav class="p-4"><h1>CookSent</h1></nav></header><main class="p-4"><h2>Simple</h2><code>import Cooksent from 'cooksent';
+<br />
+const cooksent = Cooksent.factory();</code><button class="mt-4 js-test__simple">reset</button><h2>With custom options</h2><code>import Cooksent from 'cooksent';
+<br />
+const cooksent = Cooksent.factory({
+<br />
+  &nbsp;title: 'btnLabel title',
+<br />
+   &nbsp;description: 'btnLabel description',
+<br />
+   &nbsp;btnLabel: 'Oki',
+<br />
+});</code><button class="mt-4 js-test__opts">reset</button></main><!-- Google Analytics: change UA-XXXXX-X to be your site ID. --><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-69246183-6', 'auto');
+ga('send', 'pageview');</script><script type="text/javascript" src="../dist/app.js"></script><script type="text/javascript" src="../examples/app.js"></script></body></html>

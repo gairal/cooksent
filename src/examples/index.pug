@@ -1,0 +1,24 @@
+extends html/layout.pug
+
+block content
+  h2 Simple
+  code.
+    import Cooksent from 'cooksent';
+    <br />
+    const cooksent = Cooksent.factory();
+  button.mt-4.js-test__simple reset
+  h2 With custom options
+  code.
+    import Cooksent from 'cooksent';
+    <br />
+    const cooksent = Cooksent.factory({
+    <br />
+      &nbsp;title: 'btnLabel title',
+    <br />
+       &nbsp;description: 'btnLabel description',
+    <br />
+       &nbsp;btnLabel: 'Oki',
+    <br />
+    });
+  button.mt-4.js-test__opts reset
+
