@@ -20,7 +20,7 @@ const cooksent = Cooksent.factory();
 
 # Table of Contents
 * [Installation](#installation)
-* [Logging](#logging)
+* [Consent Options](#consent-options)
 * [Contribute](#contribute)
     * [File structure](#file-structure)
     * [Getting Started](#getting-started)
